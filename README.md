@@ -29,6 +29,7 @@
 1. 448*448 사이즈로 이미지 resize
 2. 단 1개의 CNN 네트워크에 통과
 3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정
+
     ==> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정!
 
 크게는 위와 같은 3단계를 통해 YOLOv1이 수행됩니다.
