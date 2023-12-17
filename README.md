@@ -45,9 +45,9 @@
 (이미지 출처: 논문 원본)
 
 
-####*Confidence: 해당 박스 안에 물체가 있을 확률*
+*Confidence: 해당 박스 안에 물체가 있을 확률*
 
-####*C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률*
+*C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률*
 
 
 **1. 이미지를 S*S 그리드 셀로 나눈다.**
@@ -60,6 +60,8 @@
 
 
 Confidence 계산 방법과 조건부 확률에 대한 수식은 논문을 참조해주세요!
+
+
 
 
 논문에서는 PASCAL VOC detection dataset에 대해 아래와 같이 설정하여 수행했다고 합니다.
@@ -94,6 +96,8 @@ YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected 
 이 출력물을 통해 객체의 위치와 클래스를 최종적으로 결정해줘야 합니다.
 이때 사용되는 기법이 바로 NMS 입니다.
 
+-------------
+
 **NMS(Non-Maximum Suppression, 비최대 억제)**
 
 : Object Detector가 예측한 Bounding Box 중 정확한 Bounding Box를 선택하도록 하는 기법
@@ -101,12 +105,15 @@ YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected 
 NMS의 알고리즘 흐름은 아래와 같습니다.
 
 **1) 모든 Bounding Box에 대하여 threshold 이하의 Confidence score를 가지는 Box는 제거**
+
 **2) 남은 Bounding Box들을 Confidence score 기준으로 내림차순 정렬**
+
 **3) 맨 앞에 있는 Bounding Box 하나를 기준으로, 다른 Bounding Box와 IoU값 계산**
    
    - IoU가 threshold 이상인 Bounding Box는 제거
    - 많이 겹칠수록 같은 부분의 같은 물체를 검출하고 있다고 판단하기 때문!
-     
+
+
 **4) 위 과정을 순차적, 반복적으로 시행하여 모든 Bounding Box를 비교하고 제거**
 
 
