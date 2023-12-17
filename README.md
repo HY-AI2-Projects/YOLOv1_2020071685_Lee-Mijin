@@ -94,7 +94,7 @@ YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected 
 
 -------------
 
-**NMS(Non-Maximum Suppression, 비최대 억제)**
+##**NMS(Non-Maximum Suppression, 비최대 억제)**
 
 : Object Detector가 예측한 Bounding Box 중 정확한 Bounding Box를 선택하도록 하는 기법
 
