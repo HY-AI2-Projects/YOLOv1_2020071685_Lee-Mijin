@@ -27,8 +27,10 @@
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/73bda07b-b6dd-4997-8390-940f05149fdc)
 (이미지 출처: 논문 원본)     
 
-  **1. 44*44* size로 이미지 resize**
-  **2. 단 1개의 CNN 네트워크에 통과**
+  **1. 44*44* size로 이미지 resize**   
+  
+  **2. 단 1개의 CNN 네트워크에 통과**   
+  
   **3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정**
    **=> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정**      
 
