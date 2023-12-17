@@ -26,9 +26,10 @@
 ## 0️⃣YOLOv1 제안방법
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/73bda07b-b6dd-4997-8390-940f05149fdc)
 (이미지 출처: 논문 원본)
-1. 448*448 사이즈로 이미지 resize
+
+**1. 448*448 사이즈로 이미지 resize
 2. 단 1개의 CNN 네트워크에 통과
-3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정
+3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정**
 
     ==> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정!
 
@@ -39,21 +40,18 @@
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/6e0878a1-2dd6-41b5-a7ae-75c1327f732e)
 (이미지 출처: 논문 원본)
 
-**Confidence: 해당 박스 안에 물체가 있을 확률**
+*Confidence: 해당 박스 안에 물체가 있을 확률*
 
-**C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률**
+*C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률*
 
-1. 이미지를 S*S 그리드 셀로 나눈다.
+**1. 이미지를 S*S 그리드 셀로 나눈다.
 2. 각각의 그리드에서 물체가 있을 만한 영역을 B개의 Bounding Box로 예측한다.
 3. 박스의 Confidence를 예측한다.
-4. 각각의 그리드마다 C개의 클래스의 조건부 확률을 구한다.
+4. 각각의 그리드마다 C개의 클래스의 조건부 확률을 구한다.**
 
 Confidence 계산 방법과 조건부 확률에 대한 수식은 논문을 참조해주세요!
 
 논문에서는 PASCAL VOC detection dataset에 대해 아래와 같이 설정하여 수행했다고 합니다.
-- 그리드 수(S): 7
-- Bounding Box의 개수(B) : 2
-- Class(C) : 20
   
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/5f6b4786-ca04-454e-8168-a6d8ddfc9da0)
 
