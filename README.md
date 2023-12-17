@@ -34,8 +34,7 @@
   **3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정**  
   
    **=> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정**      
-
-
+</br>
    
   
 
