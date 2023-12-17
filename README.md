@@ -25,8 +25,9 @@
 
 ## 0️⃣YOLOv1 제안방법
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/73bda07b-b6dd-4997-8390-940f05149fdc)
-(이미지 출처: 논문 원본)  
+(이미지 출처: 논문 원본)      
 
+ 
 
    **1. 448*448 사이즈로 이미지 resize**
 
@@ -34,7 +35,8 @@
 
    **3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정**
 
-**==> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정!**
+**==> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정!**    
+
 
 
 크게는 위와 같은 3단계를 통해 YOLOv1이 수행됩니다.
@@ -94,7 +96,7 @@ YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected 
 
 -------------
 
-##**NMS(Non-Maximum Suppression, 비최대 억제)**
+## **NMS(Non-Maximum Suppression, 비최대 억제)**
 
 : Object Detector가 예측한 Bounding Box 중 정확한 Bounding Box를 선택하도록 하는 기법
 
