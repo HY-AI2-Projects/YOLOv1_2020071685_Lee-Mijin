@@ -47,8 +47,7 @@
 
 *Confidence: 해당 박스 안에 물체가 있을 확률*
 
-*C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률*
-
+*C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률*<br>
 
 **1. 이미지를 S*S 그리드 셀로 나눈다.**
 
@@ -57,13 +56,11 @@
 **3. 박스의 Confidence를 예측한다.**
   
 **4. 각각의 그리드마다 C개의 클래스의 조건부 확률을 구한다.**
-
-
+<br>
 Confidence 계산 방법과 조건부 확률에 대한 수식은 논문을 참조해주세요!
-
-
-
-
+<br>
+---------
+<br>
 논문에서는 PASCAL VOC detection dataset에 대해 아래와 같이 설정하여 수행했다고 합니다.
   
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/5f6b4786-ca04-454e-8168-a6d8ddfc9da0)
@@ -149,7 +146,7 @@ YOLOv1은 다음과 같은 **장점**을 가집니다.
 - 모여있거나 겹쳐있는 물체 검출 성능 떨어짐 (하나의 grid 당 2개의 박스만 검출)
 
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/d076e101-5bda-4c53-9813-ec16a7cfce02)
-(이미지 출처: 출처: https://www.researchgate.net/figure/Timeline-of-You-Only-Look-Once-YOLO-variants_fig1_369379818)
+(이미지 출처: https://www.researchgate.net/figure/Timeline-of-You-Only-Look-Once-YOLO-variants_fig1_369379818)
 
 YOLO는 YOLOv1을 시작으로 2023년 현재 YOLOv8 까지 계속해서 발전하고 있으며 아직도 많이 사용되고 있는 모델입니다.
 Object Detection을 공부하신다면 YOLO는 필수적으로 학습하시기를 권합니다!
