@@ -40,6 +40,7 @@
 (이미지 출처: 논문 원본)
 
 **Confidence: 해당 박스 안에 물체가 있을 확률**
+
 **C개의 조건부 확률: 해당 박스안에 물체가 있을 때, t번째 클래스일 확률**
 
 1. 이미지를 S*S 그리드 셀로 나눈다.
@@ -56,7 +57,7 @@ Confidence 계산 방법과 조건부 확률에 대한 수식은 논문을 참�
   
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/5f6b4786-ca04-454e-8168-a6d8ddfc9da0)
 
-위의 그림과 같이 CNN의 최종 예측 결과는 7*7*30 텐서로 나오게 됩니다.
+위의 그림과 같이 CNN의 최종 예측 결과는 7 * 7 * 30 텐서로 나오게 됩니다.
 
 ## 2️⃣Network Design
 다음으로 CNN 네트워크 디자인 및 특징입니다.
@@ -66,20 +67,20 @@ Confidence 계산 방법과 조건부 확률에 대한 수식은 논문을 참�
 YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected Layer로 이루어져 있습니다.
 
 주요 특징은 다음과 같습니다.
-1) Pre-trained Network
+**1) Pre-trained Network**
 - 이미지의 노란색 부분 즉, 앞부분의 20개의 Convolution Layer는 구글넷을 이용하여 사전에 학습 시킨 모델을 YOLO에 맞게 파인 튜닝한 네트워크입니다.
 - 여기에 이미지의 초록색 부분 즉, 4개의 Convolution Layer와 2개의 Fully-Connected Layer를 추가하여 최종 YOLO 네트워크를 구성하였습니다.
   
-2) Reduction Layer
+**2) Reduction Layer**
 - 1*1 Reduction Lyaer를 사용하여 연산량을 축소했습니다.
 (이 부분에 대해서는 Inception 등의 내용을 추가로 찾아보시기를 추천합니다.)
 
-3) Activation Function
+**3) Activation Function**
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/2faae7c2-f4f3-445a-84ff-dfdccb260aae)
 (Leaky ReLU 함수)
 - 맨 마지막 Layer에는 Linear를 나머지 Layer에는 Leaky ReLU를 Activation Function으로 사용했습니다.
 
-이러한 CNN 네트워크를 통해 7*7*30 텐서(PASCAL VOC detection dataset 기준)가 출력되는데요,
+이러한 CNN 네트워크를 통해 7 * 7 * 30 텐서(PASCAL VOC detection dataset 기준)가 출력되는데요,
 이 출력물을 통해 객체의 위치와 클래스를 최종적으로 결정해줘야 합니다.
 이때 사용되는 기법이 바로 NMS 입니다.
 
@@ -91,14 +92,16 @@ NMS의 알고리즘 흐름은 아래와 같습니다.
 1) 모든 Bounding Box에 대하여 threshold 이하의 Confidence score를 가지는 Box는 제거
 2) 남은 Bounding Box들을 Confidence score 기준으로 내림차순 정렬
 3) 맨 앞에 있는 Bounding Box 하나를 기준으로, 다른 Bounding Box와 IoU값 계산
+   
    - IoU가 threshold 이상인 Bounding Box는 제거
    - 많이 겹칠수록 같은 부분의 같은 물체를 검출하고 있다고 판단하기 때문!
-4. 위 과정을 순차적, 반복적으로 시행하여 모든 Bounding Box를 비교하고 제거
+   - 
+4) 위 과정을 순차적, 반복적으로 시행하여 모든 Bounding Box를 비교하고 제거
 
 이렇게 말로만 적혀있으면 쉽게 이해가 잘 안되실텐데요, 보다 쉽게 설명하고 있는 페이지가 있어 공유합니다.
 예제를 통해 이해하고 싶으신 분은 아래 링크를 참조하세요!
-https://wikidocs.net/142645
-https://docs.google.com/presentation/d/1aeRvtKG21KHdD5lg6Hgyhx5rPq_ZOsGjG5rJ1HP7BbA/pub?start=false&loop=false&delayms=3000&slide=id.g137784ab86_4_749
+- https://wikidocs.net/142645
+- https://docs.google.com/presentation/d/1aeRvtKG21KHdD5lg6Hgyhx5rPq_ZOsGjG5rJ1HP7BbA/pub?start=false&loop=false&delayms=3000&slide=id.g137784ab86_4_749
 
 ## 3️⃣Loss Funtion
 이번에는 YOLOv1의 Loss Function 입니다.
