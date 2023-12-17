@@ -23,4 +23,16 @@
 - 이에 Real Time Object Detection(실시간 객체 탐지) 가능
 - 관련 영상 https://www.youtube.com/watch?v=K9a6mGNmhbc
 
+## 0️⃣YOLOv1 제안방법
+![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/73bda07b-b6dd-4997-8390-940f05149fdc)
+(이미지 출처: 논문 원본)
+1. 448*448 사이즈로 이미지 resize
+2. 단 1개의 CNN 네트워크에 통과
+3. NMS(Non-Maximum Suppression)을 통해 최종 Bounding Box의 location과 class 결정
+    ==> 즉, 어디에 객체가 있는지, 이 객체가 무엇인지 결정!
 
+크게는 위와 같은 3단계를 통해 YOLOv1이 수행됩니다.
+
+## 1️⃣YOLOv1 CNN 제안방법
+앞선 'YOLOv1 제안방법'의 2에 해당하는 CNN 시스템에 대해 말씀드리겠습니다.
+![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/6e0878a1-2dd6-41b5-a7ae-75c1327f732e)
