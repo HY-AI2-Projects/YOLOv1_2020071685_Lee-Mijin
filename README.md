@@ -28,6 +28,7 @@
 (이미지 출처: 논문 원본)     
 
 </br>
+
   **1. 448*448 size로 이미지 resize**   
   
   **2. 단 1개의 CNN 네트워크에 통과**   
@@ -104,6 +105,8 @@ YOLOv1의 네트워크는 24개의 Convolution Layer와 2개의 Fully-Connected 
 
 NMS의 알고리즘 흐름은 아래와 같습니다.
 
+</br>
+
 **1) 모든 Bounding Box에 대하여 threshold 이하의 Confidence score를 가지는 Box는 제거**
 
 **2) 남은 Bounding Box들을 Confidence score 기준으로 내림차순 정렬**
@@ -116,6 +119,7 @@ NMS의 알고리즘 흐름은 아래와 같습니다.
 
 **4) 위 과정을 순차적, 반복적으로 시행하여 모든 Bounding Box를 비교하고 제거**
 
+</br>
 
 이렇게 말로만 적혀있으면 쉽게 이해가 잘 안되실텐데요, 보다 쉽게 설명하고 있는 페이지가 있어 공유합니다.
 예제를 통해 이해하고 싶으신 분은 아래 링크를 참조하세요!
@@ -147,6 +151,9 @@ YOLOv1은 다음과 같은 **장점**을 가집니다.
 반면, 다음과 같은 **한계**를 가집니다.
 - 비교적 성능이 떨어짐 (속도는 매우 빠르지만, 성능은 기존 2 stage에 비해 다소 떨어짐)
 - 모여있거나 겹쳐있는 물체 검출 성능 떨어짐 (하나의 grid 당 2개의 박스만 검출)
+
+</br>
+</br>
 
 ![image](https://github.com/HY-AI2-Projects/YOLOv1_2020071685_Lee-Mijin/assets/146939806/d076e101-5bda-4c53-9813-ec16a7cfce02)
 (이미지 출처: https://www.researchgate.net/figure/Timeline-of-You-Only-Look-Once-YOLO-variants_fig1_369379818)
