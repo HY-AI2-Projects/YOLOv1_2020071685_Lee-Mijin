@@ -162,12 +162,13 @@ YOLO는 YOLOv1을 시작으로 2023년 현재 YOLOv8 까지 계속해서 발전�
 Object Detection을 공부하신다면 YOLO는 필수적으로 학습하시기를 권합니다!
 
 ## 💻CODE
-YOLOv1 모델 구현과 관련하여 구현이 잘 되어있는 일부 GitHHub 링크를 첨부합니다.
+YOLOv1 모델 구현과 관련하여 구현이 잘 되어있는 일부 Github 링크를 첨부합니다.
 
 1) https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLO
 2) https://github.com/motokimura/yolo_v1_pytorch
 3) https://github.com/JeffersonQin/yolo-v1-pytorch
 
+-------------------------------------
 PASCAL VOC 2007 데이터는 아래 링크에서 다운받으실 수 있습니다.
   
 https://www.kaggle.com/datasets/734b7bcb7ef13a045cbdd007a3c19874c2586ed0b02b4afc86126e89d00af8d2
