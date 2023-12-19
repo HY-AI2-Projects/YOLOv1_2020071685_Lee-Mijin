@@ -168,4 +168,22 @@ YOLOv1 모델 구현과 관련하여 구현이 잘 되어있는 일부 GitHHub �
 2) https://github.com/motokimura/yolo_v1_pytorch
 3) https://github.com/JeffersonQin/yolo-v1-pytorch
 
+- PASCAL VOC 2007 데이터는 아래 링크에서 다운받으실 수 있습니다.
+- 
+https://www.kaggle.com/datasets/734b7bcb7ef13a045cbdd007a3c19874c2586ed0b02b4afc86126e89d00af8d2
 
+- Colab에서 Pytorch를 통해 다운받으실 수도 있습니다.
+
+'''
+!pip install torch torchvision
+
+import torchvision.transforms as transforms
+from torchvision.datasets import VOCDetection
+
+# 데이터셋을 다운로드할 경로 지정
+data_path = '/content/'
+
+# VOCDetection 클래스를 이용하여 데이터셋 다운로드
+train_dataset = VOCDetection(root=data_path, year='2007', image_set='train', download=True, transform=transforms.ToTensor())
+test_dataset = VOCDetection(root=data_path, year='2007', image_set='val', download=True, transform=transforms.ToTensor())
+'''
