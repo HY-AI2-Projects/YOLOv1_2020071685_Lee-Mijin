@@ -174,8 +174,9 @@ https://www.kaggle.com/datasets/734b7bcb7ef13a045cbdd007a3c19874c2586ed0b02b4afc
 
 Colab에서 Pytorch를 통해 다운받으실 수도 있습니다.
 
-
-'''!pip install torch torchvision
+<pre>
+<code>
+!pip install torch torchvision
 
 import torchvision.transforms as transforms
 from torchvision.datasets import VOCDetection
@@ -185,4 +186,6 @@ data_path = '/content/'
 
 # VOCDetection 클래스를 이용하여 데이터셋 다운로드
 train_dataset = VOCDetection(root=data_path, year='2007', image_set='train', download=True, transform=transforms.ToTensor())
-test_dataset = VOCDetection(root=data_path, year='2007', image_set='val', download=True, transform=transforms.ToTensor())'''
+test_dataset = VOCDetection(root=data_path, year='2007', image_set='val', download=True, transform=transforms.ToTensor())
+</code>
+</pre>
