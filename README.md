@@ -161,10 +161,15 @@ Object Detection을 공부하신다면 YOLO는 필수적으로 학습하시기�
 
 ## 💻CODE
 YOLOv1 모델 구현과 관련하여 구현이 잘 되어있는 일부 Github 링크를 첨부합니다.
+본인의 상황에 맞게 선택하여 사용하시면 될 것 같습니다.
+
+추가로 4번 github 출처의 yolov1 network 파일을 업로드 해놓았으니 참고하세요!
+(코드 설명에 대한 간단한 주석 추가하였음)
 
 1) https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLO
 2) https://github.com/motokimura/yolo_v1_pytorch
 3) https://github.com/JeffersonQin/yolo-v1-pytorch
+4) https://github.com/sendeniz/yolov1-real-time-obj-detection/tree/main/models
 
 -------------------------------------
 PASCAL VOC 2007 데이터는 아래 링크에서 다운받으실 수 있습니다.
